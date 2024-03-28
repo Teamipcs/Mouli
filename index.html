@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>Insurance Application Form</title>
+<style>
+    body{
+        background-color: #f2f2f2;   
+    }
+      /* CSS styles for responsiveness */
+      @media screen and (max-width: 600px) {
+        /* Styles for small screens */
+        body {
+            font-size: 14px;
+        }
+    }
+
+    @media screen and (min-width: 601px) and (max-width: 1024px) {
+        /* Styles for medium screens */
+        body {
+            font-size: 16px;
+        }
+    }
+
+    /* Example of fluid layout */
+    .bodytag {
+        width: 100%; /* 90% of the viewport width */
+        height :auto;
+        margin: 0 auto; /* Center the container */
+    }
+    table {
+        width: 70%;
+        border-collapse: collapse;
+        margin: auto;
+    }
+    th, td {
+        padding: 8px;
+        
+   
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+    .navdiv{
+        background-color:white;
+        height:40px;
+        width:100vw;
+        padding:5px;
+        display: flex ;
+        border: outset 1px;
+    }
+    .formdiv{
+        background-color: #f2f1f2;
+        position:relative;
+        border:1px solid rgb(96, 95, 95) ;
+        box-shadow: 1px 1px 1px 1px rgb(231, 240, 243);
+        width: 50%;
+        height: 100%;
+        margin-left:30%;
+        margin-top:30px;
+        padding-top:50px;
+        background-color: light rgb(222, 227, 230);
+    
+    }
+    .formdiv:hover{
+        box-shadow: 2px 2px 4px 4px rgb(117, 131, 136);
+    }
+    .lifinsname{
+        font-family: 'Times New Roman', Times, serif;
+        font-size:x-large;
+        position: absolute;
+        padding: 4px;
+        margin: 5px;;
+        color:rgb(60, 54, 79);
+        display:fixed;
+    }
+    #fabars{
+        padding-top: 10px;
+        margin-left:230px ;
+        position: relative;
+    }
+    #fauser{
+        margin-left:70%;
+        position: relative;
+        padding-top: 10px; 
+    }
+    td input{
+        height: 35px;
+        width:450px;
+    }
+    td p{
+        display:flex;
+    }
+    .radiolabel{
+
+        position: relative;
+       
+    }
+    .radiosbuttons{
+        width: 20px;
+    }
+    .qsn{
+        text-align: start;
+    }
+    #submit{
+        justify-content: center;
+        width:100px;
+        height:30px
+    }
+
+</style>
+</head>
+<body class="bodytag">
+
+<div class="navdiv"><p class="lifinsname">Life Insurance</p> <i class="fa fa-bars" id="fabars"style="font-size:24px"></i>
+    <i class="fa fa-user"   id="fauser" style="font-size:24px"></i>
+</div>
+
+<div class="formdiv" >
+<form action="" method="post" name="formdatasheet">
+    <table>
+      
+        <tr>
+            <td id="labels">Form No:</td>
+            <td><input type="text" name="form_no" placeholder="Enter Form Number" required></td>
+        </tr>
+        <tr>
+            <td id="labels">Record No:</td>
+            <td><input type="text" name="record_no" placeholder="Enter Record Number" required></td>
+        </tr>
+        <tr>
+            <td id="labels">Invoice No:</td>
+            <td><input type="text" name="invoice_no" placeholder="Enter Invoice Number"></td>
+        </tr>
+        <tr>
+            <td id="labels">Date of Purchase:</td>
+            <td><input type="text" name="date_of_purchase" placeholder="Enter Date Of Purchase"></td>
+        </tr>
+        <tr>
+            <td id="labels">Customer Id:</td>
+            <td><input type="text" name="customer_id" placeholder="Enter Customer ID"></td>
+        </tr>
+        <tr>
+            <td id="labels">File No:</td>
+            <td><input type="text" name="file_no" placeholder="Enter File Number"></td>
+        </tr>
+        <tr>
+            <th colspan="2">Policy Holder Information</th>
+        </tr>
+        <tr>
+            <td id="labels">Policy Holder Name:</td>
+            <td ><input type="text" name="policy_holder_name"placeholder="Policy Holder Name"required></td>
+        </tr>
+        <tr>
+            <td id="labels">Policy Holder Address:</td>
+            <td><input type="text" name="policy_holder_address" rows="3"placeholder="Policy Holder Address"></td>
+        </tr>
+        <tr>
+            <td id="labels">Policy Holder City:</td>
+            <td><input type="text" name="policy_holder_city"placeholder="Policy Holder City"></td>
+        </tr>
+        <tr>
+            <td id="labels">Policy Holder State:</td>
+            <td><input type="text" name="policy_holder_state"placeholder="Policy Holder State"></td>
+        </tr>
+        <tr>
+            <td id="labels">Policy Holder Zip:</td>
+            <td><input type="text" name="policy_holder_zip"placeholder="Policy Holder Zip"required></td>
+        </tr>
+        <tr>
+            <td id="labels">Policy Holder Phone:</td>
+            <td><input type="text" name="policy_holder_phone"placeholder="Policy Holder Phone"required></td>
+        </tr>
+        <tr>
+            <td id="labels">PH Email:</td>
+            <td><input type="email" name="ph_email"placeholder="PH Email"required></td>
+        </tr>
+        <tr>
+            <td id="labels">PH DOB:</td>
+            <td><input type="text" name="ph_dob"placeholder="PH DOB"></td>
+        </tr>
+        <tr>
+            <td id="labels">Education:</td>
+            <td><input type="text" name="education"placeholder="Education"></td>
+        </tr>
+        <tr>
+            <th colspan="2">Nominee Information</th>
+        </tr>
+        <tr>
+            <td id="labels">Nominee Name:</td>
+            <td><input type="text" name="nominee_name"placeholder="Nominee Name"></td>
+        </tr>
+        <tr>
+            <td id="labels">Nominee Address:</td>
+            <td><input type="text" name="nominee_address" rows="3"placeholder="Nominee Address"></td>
+        </tr>
+        <tr>
+            <td id="labels">Nominee City:</td>
+            <td><input type="text" name="nominee_city"placeholder="Nominee City"></td>
+        </tr>
+        <tr>
+            <td id="labels">Nominee State:</td>
+            <td><input type="text" name="nominee_state"placeholder="Nominee State"></td>
+        </tr>
+        <tr>
+            <td id="labels">Nominee Zip:</td>
+            <td><input type="text" name="nominee_zip"placeholder="Nominee Zip"></td>
+        </tr>
+        <tr>
+            <td id="labels">Relation With Nominee:</td>
+            <td><input type="text" name="relation_with_nominee"placeholder="Relation With Nominee"></td>
+        </tr>
+        <tr>
+            <th colspan="2">Health Information</th>
+        </tr>
+        <tr>
+            <td id="labels">Chest:</td>
+            <td><input type="text" name="chest"placeholder="Chest"></td>
+        </tr>
+        <tr>
+            <td id="labels">Height:</td>
+            <td><input type="text" name="height"placeholder="Height"></td>
+        </tr>
+        <tr>
+            <td id="labels">Weight:</td>
+            <td><input type="text" name="weight"placeholder="Weight"></td>
+        </tr>
+        <tr>
+            <td id="labels">Blood Group:</td>
+            <td><input type="text" name="blood_group"placeholder="Blood Group"></td>
+        </tr>
+        <tr>
+            <th colspan="2">Agent Information</th>
+        </tr>
+        <tr>
+            <td id="labels">Policy No:</td>
+            <td><input type="text" name="policy_no"placeholder="Policy No"></td>
+        </tr>
+        <tr>
+            <td id="labels">Reference No:</td>
+            <td><input type="text" name="reference_no"placeholder="Reference No"></td>
+        </tr>
+        <tr>
+            <td id="labels">Agent Name:</td>
+            <td><input type="text" name="agent_name"placeholder="Agent Name"></td>
+        </tr>
+        <tr>
+            <td id="labels">Agent Address:</td>
+            <td><input type="text" name="agent_address" rows="3"placeholder="Agent Address"></td>
+        </tr>
+        <tr>
+            <td id="labels">Agent City:</td>
+            <td><input type="text" name="agent_city"placeholder="Agent City"></td>
+        </tr>
+        <tr>
+            <td id="labels"> Agent State:</td>
+            <td><input type="text" name="agent_state"placeholder="Agent State"></td>
+        </tr>
+        <tr>
+            <td id="labels">Agent Zip Code:</td>
+            <td><input type="text" name="agent_zip_code"placeholder="Agent Zip Code"></td>
+        </tr>
+        <tr>
+            <td id="labels">Agent Code:</td>
+            <td><input type="text" name="agent_code"placeholder="Agent Code"></td>
+        </tr>
+        <tr>
+            <td id="labels">Agent Licence No:</td>
+            <td><input type="text" name="agent_licence_no"placeholder="Agent Licence No"></td>
+        </tr>
+        <tr>
+            <th colspan="2">Insurance Details</th>
+        </tr>
+        <tr>
+            <td id="labels">Plan Name:</td>
+            <td><input type="text" name="plan_name"placeholder="Plan Name"></td>
+        </tr>
+        <tr>
+            <td id="labels">Plan Code:</td>
+            <td><input type="text" name="plan_code"placeholder="Plan Code"></td>
+        </tr>
+        <tr>
+            <td id="labels">Sum Of Insured:</td>
+            <td><input type="text" name="suminsured"placeholder="Sum Of Insured"></td>
+        </tr>
+        <tr>
+            <td id="labels">Period Of Insurance:</td>
+            <td><input type="text" name="period_of_insurance"placeholder="Period Of Insurance"></td>
+        </tr>
+        
+        <tr>
+        <th colspan="2" class="qsn">1.Does the life to be insured consume Alcohol/cigarettes/bidis or tobacco in any form?</th>
+        </tr>
+        
+        <tr>
+            <td class="radiolabel">Yes</td>
+            <td><input type="radio" name="q11" value="Yes" class="radiosbuttons"></td>
+        </tr>
+
+        <tr>
+            <td class="radiolabel">No</td>
+            <td><input type="radio" name="q12" value="No"  class="radiosbuttons"></td>
+        </tr>
+
+        <tr>
+            <th colspan="2" class="qsn" >2. Is the life to be insured currently taking any medication or drug?</th>
+        </tr>
+            
+            <tr>
+                <td class="radiolabel">Yes</td>
+                <td><input type="radio" name="q21" value="Yes" class="radiosbuttons"></td>
+            </tr>
+    
+            <tr>
+                <td class="radiolabel">No</td>
+                <td><input type="radio" name="q22" value="No"  class="radiosbuttons"></td>
+            </tr>
+
+            <tr>
+                <th colspan="2" class="qsn" >3.Hypertension/high blood pressure </th>
+            </tr>
+                
+                <tr>
+                    <td class="radiolabel">Yes</td>
+                    <td><input type="radio" name="q31" value="Yes" class="radiosbuttons"></td>
+                </tr>
+        
+                <tr>
+                    <td class="radiolabel">No</td>
+                    <td><input type="radio" name="q32" value="No"  class="radiosbuttons"></td>
+                </tr>
+            
+                <tr>
+                    <th colspan="2" class="qsn" >4.Diabetes or raised blood sugar</th>
+                </tr>
+                    
+                    <tr>
+                        <td class="radiolabel">Yes</td>
+                        <td><input type="radio" name="q41" value="Yes" class="radiosbuttons"></td>
+                    </tr>
+            
+                    <tr>
+                        <td class="radiolabel">No</td>
+                        <td><input type="radio" name="q42" value="No"  class="radiosbuttons"></td>
+                    </tr>
+                
+                    <tr>
+                        <th colspan="2" class="qsn" >5.Cardiovascular disease, Palpitations, Heart attack, stroke, chest pain </th>
+                    </tr>
+                        
+                        <tr>
+                            <td class="radiolabel">Yes</td>
+                            <td><input type="radio" name="q51" value="Yes" class="radiosbuttons"></td>
+                        </tr>
+                
+                        <tr>
+                            <td class="radiolabel">No</td>
+                            <td><input type="radio" name="q52" value="No"  class="radiosbuttons"></td>
+                        </tr>
+                        
+                        <tr>
+                            <th colspan="2" class="qsn" >6.Genitourinary diseases e.g. Kidney disorder, Bladder disorder, Urine abnormality, renal stones or genital organ disorder
+                            </th>
+                        </tr>
+                            
+                            <tr>
+                                <td class="radiolabel">Yes</td>
+                                <td><input type="radio" name="q61" value="Yes" class="radiosbuttons"></td>
+                            </tr>
+                    
+                            <tr>
+                                <td class="radiolabel">No</td>
+                                <td><input type="radio" name="q62" value="No"  class="radiosbuttons"></td>
+                            </tr>
+                            <tr>
+                                <th colspan="2" class="qsn" >7.Has the life to be insured ever been tested positive for HIV / AIDS, hepatitis B or C or any sexually transmitted disease?
+                                </th>
+                            </tr>
+                                
+                                <tr>
+                                    <td class="radiolabel">Yes</td>
+                                    <td><input type="radio" name="q71" value="Yes" class="radiosbuttons"></td>
+                                </tr>
+                        
+                                <tr>
+                                    <td class="radiolabel">No</td>
+                                    <td><input type="radio" name="q72" value="No"  class="radiosbuttons"></td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2" class="qsn" >8.Is the life to be insured currently covered under any health insurance policy with any other company?
+                                    </th>
+                                </tr>
+                                    
+                                    <tr>
+                                        <td class="radiolabel">Yes</td>
+                                        <td><input type="radio" name="q81" value="Yes" class="radiosbuttons"></td>
+                                    </tr>
+                            
+                                    <tr>
+                                        <td class="radiolabel">No</td>
+                                        <td><input type="radio" name="q82" value="No"  class="radiosbuttons"></td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <th colspan="2" class="qsn" >9.Has the life to be insured ever been involved or is planning to pursue any?
+                                        </th>
+                                    </tr>
+                                        
+                                        <tr>
+                                            <td class="radiolabel">Yes</td>
+                                            <td><input type="radio" name="q91" value="Yes" class="radiosbuttons"></td>
+                                        </tr>
+                                
+                                        <tr>
+                                            <td class="radiolabel">No</td>
+                                            <td><input type="radio" name="q92" value="No"  class="radiosbuttons"></td>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2" class="qsn" >10.Does the life to be insured wear glasses?
+                                            </th>
+                                        </tr>
+                                            
+                                            <tr>
+                                                <td class="radiolabel">Yes</td>
+                                                <td><input type="radio" name="q101" value="Yes" class="radiosbuttons"></td>
+                                            </tr>
+                                    
+                                            <tr>
+                                                <td class="radiolabel">No</td>
+                                                <td><input type="radio" name="q102" value="No"  class="radiosbuttons"></td>
+                                            </tr>        
+                
+                
+        
+        
+
+        <tr>
+            <td id="labels">Payment Option:</td>
+            <td><input type="text" name="payment_option"placeholder="Payment Option"></td>
+        </tr>
+        <tr>
+            <td id="labels">Premium:</td>
+            <td><input type="text" name="premium"placeholder="Premium"></td>
+        </tr>
+        <tr>
+            <td id="labels">Discount:</td>
+            <td><input type="text" name="discount"placeholder="Discount"></td>
+        </tr>
+        <tr>
+            <td id="labels">Total Amount:</td>
+            <td><input type="text" name="total_amount"placeholder="Total Amount"></td>
+        </tr>
+        <tr>
+            <td id="labels">Card Type:</td>
+            <td><input type="text" name="card_type"placeholder="Card Type"></td>
+
+        </tr>
+        <tr>
+            <td id="labels">Card No:</td>
+            <td><input type="text" name="card_no"placeholder="Card No"></td>
+        </tr>
+        <tr>
+            <td id="labels">Expiry Date:</td>
+            <td><input type="text" name="expiry_date"placeholder="Expiry Date"></td>
+        </tr>
+        <tr>
+            <td id="labels">Card Holder Name:</td>
+            <td><input type="text" name="card_holder_name"placeholder="Card Holder Name"></td>
+        </tr>
+        <tr>
+            <td id="labels">Transaction ID:</td>
+            <td><input type="text" name="transaction_id"placeholder="Transaction ID"></td>
+        </tr>
+        <tr>
+            <td id="labels">Remarks:</td>
+            <td><input type="text" name="remarks"placeholder="Remarks"></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Submit" id="submit"></td> 
+        </tr>
+    
+
+</table> 
+</form> 
+</div> 
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwg0QtO3IFM95IWVW0vceG43ViIUGBtqAPuqnPayJ4qOH5wbpgwTLrsQr4EVAn-xqiWJQ/exec'
+
+const form = document.forms['formdatasheet']
+
+form.addEventListener('submit', e => {
+  e.preventDefault()
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+  .then(response => alert("Thank you! your form is submitted successfully." ))
+  .then(() => { window.location.reload(); })
+  .catch(error => console.error('Error!', error.message))
+})
+</script>
+</body>           
+</html>
